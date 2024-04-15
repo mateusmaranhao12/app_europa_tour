@@ -1,30 +1,36 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="app-view">
+    <router-view />
+  </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.app-view {
+  background-color: #070707;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-nav {
-  padding: 30px;
+body::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+body::-webkit-scrollbar-track {
+  background: #ffffff;
+  /* color of the tracking area */
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+body::-webkit-scrollbar-thumb {
+  background-color: #d79c1e;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid #ffffff;
+  /* creates padding around scroll thumb */
 }
 </style>

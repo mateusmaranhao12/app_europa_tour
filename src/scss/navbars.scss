@@ -1,0 +1,46 @@
+.nav-pag-index {
+    background: rgb(103, 103, 103);
+    background: linear-gradient(197deg, rgba(103, 103, 103, 1) 0%, rgba(79, 79, 79, 1) 35%, rgba(0, 0, 0, 1) 100%);
+    border-bottom: 1px solid white;
+    padding: 10px;
+
+    h2 {
+        color: yellow;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: orange;
+        }
+    }
+
+    .nav-link {
+        color: yellow;
+        font-weight: bold;
+        position: relative;
+        text-transform: uppercase;
+
+        &:after {
+            display: block;
+            content: '';
+            border-bottom: solid 3px orange;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+        }
+
+        &.fromRight:after {
+            transform-origin: 100% 50%;
+        }
+
+        &.fromLeft:after {
+            transform-origin: 0% 50%;
+        }
+
+    }
+}
