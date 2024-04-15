@@ -5,7 +5,7 @@
     padding: 10px;
 
     h2 {
-        color: yellow;
+        color: rgb(255, 255, 193);
         font-weight: bold;
         text-transform: uppercase;
         margin-top: 10px;
@@ -17,7 +17,7 @@
     }
 
     .nav-link {
-        color: yellow;
+        color: rgb(255, 255, 193);
         font-weight: bold;
         position: relative;
         text-transform: uppercase;
@@ -42,5 +42,23 @@
             transform-origin: 0% 50%;
         }
 
+    }
+
+    .nav-link {
+        &.active {
+            color: orange;
+            position: relative;
+            cursor: default;
+            border-radius: 10px;
+        }
+
+        &.active:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            border-bottom: none;
+        }
     }
 }
