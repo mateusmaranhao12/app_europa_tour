@@ -5,6 +5,13 @@
 </template>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Paytone+One');
+
+* {
+    font-family: "Paytone One", sans-serif;
+}
+
 .app-view {
   background-color: #070707;
   color: white;
@@ -21,7 +28,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #000000;
   /* color of the tracking area */
 }
 
@@ -30,7 +37,7 @@ body::-webkit-scrollbar-thumb {
   /* color of the scroll thumb */
   border-radius: 20px;
   /* roundness of the scroll thumb */
-  border: 3px solid #ffffff;
+  border: 3px solid #000000;
   /* creates padding around scroll thumb */
 }
 </style>

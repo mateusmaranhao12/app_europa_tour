@@ -1,0 +1,100 @@
+.boas-vindas {
+
+    background: rgb(200, 97, 0);
+    background: linear-gradient(128deg, rgba(200, 97, 0, 1) 0%, rgba(255, 128, 0, 1) 35%, rgba(255, 196, 0, 1) 100%);
+    padding: 30px;
+
+    h1 {
+        font-variant: small-caps;
+        text-align: center;
+        font-size: 35px;
+        letter-spacing: 4px;
+        word-spacing: 5px;
+        color: rgb(255, 247, 0);
+        text-shadow: rgb(0, 0, 0) 5px 5px 2px;
+    }
+
+    img {
+        border-radius: 20px;
+    }
+
+}
+
+.secao-index {
+
+    background: rgb(103, 103, 103);
+    background: linear-gradient(128deg, rgba(103, 103, 103, 1) 0%, rgba(79, 79, 79, 1) 35%, rgba(0, 0, 0, 1) 100%);
+    height: 70vh;
+
+    h3 {
+        text-align: center;
+        letter-spacing: 4px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        text-shadow: 3px 3px 2px #ffc400;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    ul {
+
+        background-color: black;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 20px;
+        box-shadow: rgba(240, 195, 46, 0.4) 5px 5px, rgba(240, 179, 46, 0.3) 10px 10px, rgba(240, 179, 46, 0.2) 15px 15px, rgba(240, 140, 46, 0.1) 20px 20px, rgba(240, 124, 46, 0.05) 25px 25px;
+
+        li {
+            letter-spacing: 2px;
+            list-style: none;
+            text-align: center;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+            text-shadow: 3px 3px 2px #ffc400;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+
+    .carousel-inner {
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    .carousel-caption {
+
+        h5 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 25px;
+            -webkit-text-stroke: 1px black;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 22px;
+            -webkit-text-stroke: 1px black;
+        }
+
+    }
+}
+
+.card {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(169deg, rgba(0, 0, 0, 1) 0%, rgba(47, 47, 47, 1) 35%, rgba(69, 69, 69, 1) 100%);
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 2px #000000;
+
+    .btn-warning {
+        background-color: rgb(255, 217, 0);
+        color: black;
+
+        &:hover {
+            border-color: orangered;
+            background-color: orangered;
+            color: white;
+        }
+    }
+}
