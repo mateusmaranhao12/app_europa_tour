@@ -90,7 +90,7 @@
 //cards
 
 .card {
-    
+
     background: $black;
     background: linear-gradient(169deg, rgba(0, 0, 0, 1) 0%, rgba(47, 47, 47, 1) 35%, rgba(69, 69, 69, 1) 100%);
     color: $white;
@@ -112,4 +112,88 @@
             color: $white;
         }
     }
+}
+
+.view-details {
+
+    background: rgb(24, 8, 0);
+    background: linear-gradient(225deg, rgba(24, 8, 0, 1) 0%, rgba(57, 21, 0, 1) 35%, rgba(111, 48, 0, 1) 100%);
+    padding: 20px;
+
+    h3 {
+        background-color: $black;
+        border: 1px $solid $white;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: $center;
+        letter-spacing: 4px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        text-shadow: 3px 3px 2px $yellow;
+        box-shadow: rgba(240, 195, 46, 0.4) 5px 5px, rgba(240, 179, 46, 0.3) 10px 10px, rgba(240, 179, 46, 0.2) 15px 15px, rgba(240, 140, 46, 0.1) 20px 20px, rgba(240, 124, 46, 0.05) 25px 25px;
+        text-transform: $uppercase;
+        font-weight: $bold;
+        margin-bottom: 40px;
+    }
+
+    img {
+        display: $block;
+        /* Garante que a imagem será exibida como bloco */
+        margin: 0 auto;
+        /* Alinha a imagem horizontalmente no centro */
+        max-width: 100%;
+        /* Define a largura máxima da imagem como 100% do contêiner */
+        height: auto;
+        /* Garante que a altura seja ajustada automaticamente proporcionalmente à largura */
+        max-height: 300px;
+        /* Define a altura máxima da imagem */
+        border-radius: 20px;
+    }
+
+    p {
+        text-align: $center;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        text-shadow: 3px 3px 2px $yellow;
+        margin-bottom: 20px;
+    }
+
+}
+
+.view-details2 {
+
+    background: rgb(255, 210, 147);
+    background: linear-gradient(106deg, rgba(255, 210, 147, 1) 0%, rgba(255, 189, 65, 1) 35%, rgba(255, 171, 0, 1) 100%);
+    padding: 20px;
+
+    h3 {
+        text-align: $center;
+        letter-spacing: 4px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        text-shadow: 3px 3px 2px $yellow;
+        text-transform: $uppercase;
+        font-weight: $bold;
+        margin-bottom: 20px;
+    }
+
+    img {
+        display: $block;
+        /* Garante que a imagem será exibida como bloco */
+        margin: 0 auto;
+        /* Alinha a imagem horizontalmente no centro */
+        max-width: 100%;
+        /* Define a largura máxima da imagem como 100% do contêiner */
+        height: auto;
+        /* Garante que a altura seja ajustada automaticamente proporcionalmente à largura */
+        max-height: 300px;
+        /* Define a altura máxima da imagem */
+        border-radius: 20px;
+    }
+
+    p {
+        color: $black;
+        text-align: $center;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        text-shadow: 3px 3px 2px $white;
+        margin-bottom: 20px;
+    }
+
 }
