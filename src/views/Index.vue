@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 <div class="col" v-for="p in passeios" :key="p.passeio">
-                    <div class="card">
+                    <div class="card card-index">
                         <img :src="require(`../assets/imgs/${p.imagem}.jpg`)" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ p.titulo }}</h5>

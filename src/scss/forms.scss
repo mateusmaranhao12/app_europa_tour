@@ -1,0 +1,40 @@
+@import 'variaveis';
+
+.card-forms {
+
+    background-color: $black;
+    color: $white;
+    padding: 20px;
+    border: 1px $solid $white;
+    width: 80%;
+
+    .card-title {
+        letter-spacing: 4px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        text-shadow: 3px 3px 2px $yellow;
+        text-transform: $uppercase;
+        font-weight: $bold;
+        margin-bottom: 30px;
+        text-align: $center;
+    }
+
+    .btn-submit {
+        background-color: $yellow;
+        color: $black;
+
+        &:hover {
+            background-color: $orangered;
+            color: $white;
+        }
+    }
+
+    p {
+        .text-warning {
+            text-decoration: $none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
