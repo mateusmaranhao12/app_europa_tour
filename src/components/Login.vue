@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-end mt-4">
-                            <button type="submit" class="btn btn-submit">Entrar</button>
+                            <button @click="fazerLogin()" type="submit" class="btn btn-submit">Entrar</button>
                         </div>
                         <div class="col-md-12 d-flex justify-content-center">
                             <p>Ainda não é cadastrado? Faça seu <router-link class="text-warning"
@@ -60,6 +60,12 @@ export default class Login extends Vue {
 
     alternarExibicaoSenha() {
         this.mostrar_senha = !this.mostrar_senha
+    }
+
+    //fazer login
+
+    public fazerLogin() {
+        this.$router.push('/pagina-usuario')
     }
 
 }

@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 import Cadastro from '@/components/Cadastro.vue'
+import Dashboard from '@/components/Dashboard.vue'
 import Index from '@/views/Index.vue'
 import Login from '@/components/Login.vue'
+import PaginaUsuario from '@/views/PaginaUsuario.vue'
 import ViewDetails from '@/components/ViewDetails.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -39,6 +41,20 @@ const routes: Array<RouteRecordRaw> = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+
+  {
+    path: '/pagina-usuario',
+    name: 'paginausuario',
+    component: PaginaUsuario,
+    redirect: '/pagina-usuario/dashboard',
+    children: [
+      {
+        path: '/pagina-usuario/dashboard',
+        name: 'dashboard',
+        component: Dashboard
+      }
+    ]
   }
 ]
 
