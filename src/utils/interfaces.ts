@@ -1,10 +1,10 @@
-export interface CarouselItem {
+export interface CarouselItem { //carousel
     imagem: string
     titulo: string
     descricao: string
 }
 
-export interface Passeio {
+export interface Passeio { //passeios
     nome: string
     passeio: string
     resumo: string
@@ -13,4 +13,10 @@ export interface Passeio {
     titulo: string
     texto: string
     texto2: string
-  }
+}
+
+export interface MensagemAlerta { //mensagem de alerta
+    status: string
+    mensagem: string
+    icone: string
+}

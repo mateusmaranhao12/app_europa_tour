@@ -5,22 +5,27 @@
             <div class="card card-forms">
                 <div class="card-body">
                     <h5 class="card-title">Cadastro</h5>
+                    <div v-if="mensagem_alerta" class="text-center" :class="mensagem_alerta.status">
+                        <i :class="mensagem_alerta.icone"></i> {{ mensagem_alerta.mensagem }}
+                    </div>
                     <form>
                         <div class="row mb-4">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Nome</label>
-                                <input v-model="nome" type="text" class="form-control" id="name" placeholder="Digite seu nome">
+                                <input v-model="usuarios_cadastrados.nome" type="text" class="form-control" name="nome"
+                                    id="nome" placeholder="Digite seu nome">
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email</label>
-                                <input v-model="email" type="text" class="form-control" id="email" placeholder="Digite seu email">
+                                <input v-model="usuarios_cadastrados.email" type="text" class="form-control"
+                                    name="email" id="email" placeholder="Digite seu email">
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="senha" class="form-label">Senha</label>
                             <div class="input-group mb-3">
-                                <input v-model="senha" :type="mostrar_senha ? 'text' : 'password'" class="form-control white-text"
-                                    placeholder="Senha" name="senha" aria-label="Senha"
+                                <input v-model="usuarios_cadastrados.senha" :type="mostrar_senha ? 'text' : 'password'"
+                                    class="form-control white-text" placeholder="Senha" name="senha" aria-label="Senha"
                                     aria-describedby="button-addon2">
                                 <button @click="alternarExibicaoSenha()" class="btn btn-outline-warning" type="button"
                                     id="senha">
@@ -30,7 +35,8 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-end mt-4">
-                            <button @click="cadastrarUsuario()" type="submit" class="btn btn-submit">Cadastrar</button>
+                            <button @click.prevent="cadastrarUsuario()" type="submit"
+                                class="btn btn-submit">Cadastrar</button>
                         </div>
 
                         <div class="col-md-12 d-flex justify-content-center">
@@ -43,7 +49,6 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script lang="ts">
@@ -51,6 +56,7 @@
 import { Options, Vue } from 'vue-class-component'
 import NavIndex from '@/components/NavIndex.vue'
 import axios from 'axios'
+import { MensagemAlerta } from '@/utils/interfaces'
 
 @Options({
 
@@ -64,9 +70,15 @@ export default class Cadastro extends Vue {
 
     mostrar_senha = false
 
-    nome = ''
-    email = ''
-    senha = ''
+    mensagem_alerta: MensagemAlerta | null = null
+
+    usuarios_cadastrados = {
+
+        nome: '',
+        email: '',
+        senha: ''
+
+    }
 
     //alternar exibição da senha
     alternarExibicaoSenha() {
@@ -74,24 +86,60 @@ export default class Cadastro extends Vue {
     }
 
     //Cadastrar usuário
-    public async cadastrarUsuario() {
+    public cadastrarUsuario() {
+        var cadastrar_usuario = this.toFormData(this.usuarios_cadastrados)
 
-        try {
+        axios.post(
+            'http://localhost/Projetos/app_europa_tour/src/backend/cadastrar_usuario.php', cadastrar_usuario
+        ).then((res) => {
+            if (res.data.status === 'sucesso') { //usuario cadastrado com sucesso
+                this.mensagem_alerta = {
+                    icone: 'fa-solid fa-check',
+                    status: 'alert alert-success',
+                    mensagem: res.data.mensagem
+                }
 
-            const response = await axios.post('http://localhost:3000/api/cadastro', {
-                nome: this.nome,
-                email: this.email,
-                senha: this.senha
-            })
-            console.log(response.data.message)
-        } catch (error) {
-            console.error('Erro ao cadastrar usuário:', error);
-        }
+                this.limparFormulario()
 
+            } else if (res.data.status === 'info') {
+
+                this.mensagem_alerta = {
+                    icone: 'fa-solid fa-circle-info',
+                    status: 'alert alert-info',
+                    mensagem: res.data.mensagem
+                }
+
+            } else if (res.data.status === 'erro') { //erro ao cadastrar usuario
+                this.mensagem_alerta = {
+                    icone: 'fa-solid fa-triangle-exclamation',
+                    status: 'alert alert-danger',
+                    mensagem: res.data.mensagem
+                }
+            }
+
+            setTimeout(() => {
+                this.mensagem_alerta = { icone: '', status: '', mensagem: '' }
+            }, 5000)
+        })
     }
 
-}
+    private limparFormulario() {
+        this.usuarios_cadastrados.nome = ''
+        this.usuarios_cadastrados.email = ''
+        this.usuarios_cadastrados.senha = ''
+    }
 
+    //formdata
+    toFormData(obj: Record<string, any>): FormData {
+        const liveFormData = new FormData()
+        for (const key in obj) {
+            liveFormData.append(key, obj[key])
+        }
+        return liveFormData
+    }
+
+
+}
 
 </script>
 
