@@ -37,6 +37,14 @@
             }
         }
     }
+
+    .form-control {
+        background-color: $black;
+    }
+
+    ::placeholder {
+        color: #dadada; /* Por exemplo, cinza */
+    }
 }
 
     .alert-success {
