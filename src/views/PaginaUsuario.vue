@@ -1,5 +1,4 @@
 <template>
-    <h1>Página Usuário</h1>
     <RouterView />
 </template>
 

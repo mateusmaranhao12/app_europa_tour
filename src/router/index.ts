@@ -1,10 +1,14 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
+import AgendarViagem from '@/components/AgendarViagem.vue'
 import Cadastro from '@/components/Cadastro.vue'
 import Dashboard from '@/components/Dashboard.vue'
 import Index from '@/views/Index.vue'
+import ListaDeDesejos from '@/components/ListaDeDesejos.vue'
 import Login from '@/components/Login.vue'
 import PaginaUsuario from '@/views/PaginaUsuario.vue'
+import Perfil from '@/components/Perfil.vue'
+import ViagensAgendadas from '@/components/ViagensAgendadas.vue'
 import ViewDetails from '@/components/ViewDetails.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -49,11 +53,37 @@ const routes: Array<RouteRecordRaw> = [
     component: PaginaUsuario,
     redirect: '/pagina-usuario/dashboard',
     children: [
+
       {
-        path: '/pagina-usuario/dashboard',
+        path: 'dashboard',
         name: 'dashboard',
         component: Dashboard
-      }
+      },
+
+      {
+        path: 'viagens-agendadas',
+        name: 'viagens-agendadas',
+        component: ViagensAgendadas
+      },
+
+      {
+        path: 'agendar-viagem',
+        name: 'agendar-viagem',
+        component: AgendarViagem
+      },
+
+      {
+        path: 'lista-de-desejos',
+        name: 'lista-de-desejos',
+        component: ListaDeDesejos
+      },
+
+      {
+        path: 'perfil',
+        name: 'perfil',
+        component: Perfil
+      },
+
     ]
   }
 ]

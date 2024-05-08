@@ -1,12 +1,12 @@
 <template>
     <nav-usuario />
-    <h1>Dashboard</h1>
+    <h1>ViagensAgendadas</h1>
 </template>
 
 <script lang="ts">
 
 import { Options, Vue } from 'vue-class-component'
-import NavUsuario from './NavUsuario.vue';
+import NavUsuario from './NavUsuario.vue'
 
 @Options({
 
@@ -16,7 +16,7 @@ import NavUsuario from './NavUsuario.vue';
 
 })
 
-export default class Dashboard extends Vue {
+export default class ViagensAgendadas extends Vue {
 
 
 }
