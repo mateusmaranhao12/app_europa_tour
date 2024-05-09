@@ -57,6 +57,8 @@
     }
 }
 
+//botoes
+
 .btn-lista-desejos {
     //botão de adicionar a lista de desejos
     color: $black;
@@ -64,6 +66,16 @@
 
     &:hover {
         background-color: $orangered;
+    }
+}
+
+.btn-agendar-viagem {
+    //botão de adicionar a lista de desejos
+    color: $white;
+    background-color: rgb(126, 40, 0);
+
+    &:hover {
+        background-color: rgb(66, 21, 0);
     }
 }
 

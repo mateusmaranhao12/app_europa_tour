@@ -39,6 +39,9 @@
                         <div class="m-2 d-flex justify-content-center">
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
+                        <div class="m-2 d-flex justify-content-center">
+                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,6 +64,9 @@
                         </div>
                         <div class="m-2 d-flex justify-content-center">
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
+                        </div>
+                        <div class="m-2 d-flex justify-content-center">
+                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -85,6 +91,9 @@
                         <div class="m-2 d-flex justify-content-center">
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
+                        <div class="m-2 d-flex justify-content-center">
+                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,6 +116,9 @@
                         </div>
                         <div class="m-2 d-flex justify-content-center">
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
+                        </div>
+                        <div class="m-2 d-flex justify-content-center">
+                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -131,6 +143,9 @@
                         <div class="m-2 d-flex justify-content-center">
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
+                        <div class="m-2 d-flex justify-content-center">
+                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,6 +168,9 @@
                         </div>
                         <div class="m-2 d-flex justify-content-center">
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
+                        </div>
+                        <div class="m-2 d-flex justify-content-center">
+                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
