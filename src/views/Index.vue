@@ -6,7 +6,7 @@
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <h1>Bem vindo ao app Europa Tour</h1>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 d-none d-md-block">
                     <img class="img-fluid" src="../assets/imgs/bem-vindo.jpg">
                 </div>
             </div>

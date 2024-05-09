@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 import AgendarViagem from '@/components/AgendarViagem.vue'
+import AgendarViagemLocal from '@/components/AgendarViagemLocal.vue'
 import Cadastro from '@/components/Cadastro.vue'
 import Dashboard from '@/components/Dashboard.vue'
 import Index from '@/views/Index.vue'
@@ -83,6 +84,12 @@ const routes: Array<RouteRecordRaw> = [
         name: 'perfil',
         component: Perfil
       },
+
+      {
+        path: 'agendar-viagem-local',
+        name: 'agendar-viagem-local',
+        component: AgendarViagemLocal
+      }
 
     ]
   }

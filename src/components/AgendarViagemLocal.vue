@@ -4,20 +4,14 @@
         <div class="row justify-content-center align-items-center vh-100">
             <div class="card card-forms">
                 <div class="card-body d-flex flex-column align-items-center">
-                    <h5 class="card-title">Agendar Viagem</h5>
+                    <h5 class="card-title">Agendar Viagem para Madrid</h5>
+                    <img src="../assets/imgs/espanha1.jpg" class="d-none d-md-block img-agendar-viagem card-img-top">
                     <form>
                         <div class="row mb-4">
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-12 mb-3">
                                 <label for="local_origem" class="form-label">Local de Origem</label>
                                 <select class="form-select" aria-label="local_origem" id="local_origem">
                                     <option selected disabled>Informe seu local de origem</option>
-                                    <option v-for="c in local_origem" :key="c.id">{{ c.cidade }}</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="local_origem" class="form-label">Destino</label>
-                                <select class="form-select" aria-label="local_origem" id="local_origem">
-                                    <option selected disabled>Informe seu destino</option>
                                     <option v-for="c in local_origem" :key="c.id">{{ c.cidade }}</option>
                                 </select>
                             </div>

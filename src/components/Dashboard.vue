@@ -40,7 +40,7 @@
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
                         <div class="m-2 d-flex justify-content-center">
-                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                            <button @click="AgendarViagemLocal()" type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
                         <div class="m-2 d-flex justify-content-center">
-                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                            <button @click="AgendarViagemLocal()" type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
                         <div class="m-2 d-flex justify-content-center">
-                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                            <button @click="AgendarViagemLocal()" type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
                         <div class="m-2 d-flex justify-content-center">
-                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                            <button @click="AgendarViagemLocal()" type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
                         <div class="m-2 d-flex justify-content-center">
-                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                            <button @click="AgendarViagemLocal()" type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                             <button type="button" class="btn btn-lista-desejos">Adicionar a lista de desejos</button>
                         </div>
                         <div class="m-2 d-flex justify-content-center">
-                            <button type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
+                            <button @click="AgendarViagemLocal()" type="button" class="btn btn-agendar-viagem">Agendar viagem</button>
                         </div>
                     </div>
                 </div>
@@ -239,6 +239,11 @@ export default class Dashboard extends Vue {
         {cidade: 'Sion', imagem: 'suica3', resumo: 'lorem ipsum'},
         {cidade: 'Zermatt', imagem: 'suica4', resumo: 'lorem ipsum'}
     ]
+
+    //Agendar Viagem em um local específico (ex: Veneza)
+    public AgendarViagemLocal() {
+        this.$router.push('agendar-viagem-local')
+    }
 
 }
 

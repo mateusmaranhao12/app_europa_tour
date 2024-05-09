@@ -2,6 +2,9 @@
 
 .card-forms {
 
+    box-shadow: rgba(240, 195, 46, 0.4) 5px 5px, rgba(240, 179, 46, 0.3) 10px 10px, rgba(240, 179, 46, 0.2) 15px 15px, rgba(240, 140, 46, 0.1) 20px 20px, rgba(240, 124, 46, 0.05) 25px 25px;
+
+
     background-color: $black;
     color: $white;
     padding: 20px;
@@ -43,25 +46,51 @@
         color: $white;
     }
 
+    .form-select {
+        background-color: $black;
+        color: $white;
+    }
+
+    /* Define o estilo do scroll */
+    .form-select::-webkit-scrollbar {
+        width: 12px;
+        /* Largura do scroll */
+    }
+
+    /* Define a cor do scroll */
+    .form-select::-webkit-scrollbar-thumb {
+        background-color: $yellow;
+        /* Cor do scroll */
+        border-radius: 6px;
+        /* Raio das bordas do scroll */
+    }
+
+    /* Define a cor do fundo do scroll */
+    .form-select::-webkit-scrollbar-track {
+        background-color: $black;
+        /* Cor do fundo do scroll */
+    }
+
     ::placeholder {
-        color: #dadada; /* Por exemplo, cinza */
+        color: #dadada;
+        /* Por exemplo, cinza */
     }
 }
 
-    .alert-success {
-        background-color: rgb(0, 36, 0);
-        color: greenyellow;
-        border: 1px solid greenyellow;
-    }
+.alert-success {
+    background-color: rgb(0, 36, 0);
+    color: greenyellow;
+    border: 1px solid greenyellow;
+}
 
-    .alert-danger {
-        background-color: rgb(36, 0, 0);
-        color: rgb(255, 47, 47);
-        border: 1px solid rgb(255, 47, 47);
-    }
+.alert-danger {
+    background-color: rgb(36, 0, 0);
+    color: rgb(255, 47, 47);
+    border: 1px solid rgb(255, 47, 47);
+}
 
-    .alert-info {
-        background-color: rgb(0, 16, 36);
-        color: rgb(47, 144, 255);
-        border: 1px solid rgb(47, 137, 255);
-    }
+.alert-info {
+    background-color: rgb(0, 16, 36);
+    color: rgb(47, 144, 255);
+    border: 1px solid rgb(47, 137, 255);
+}
