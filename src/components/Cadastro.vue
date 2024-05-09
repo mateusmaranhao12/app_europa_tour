@@ -8,7 +8,7 @@
                     <div v-if="mensagem_alerta" class="text-center" :class="mensagem_alerta.status">
                         <i :class="mensagem_alerta.icone"></i> {{ mensagem_alerta.mensagem }}
                     </div>
-                    <form>
+                    <form @submit.prevent="cadastrarUsuario()">
                         <div class="row mb-4">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Nome</label>
