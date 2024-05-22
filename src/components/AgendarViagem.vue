@@ -8,28 +8,52 @@
                     <form>
                         <div class="row mb-4">
                             <div class="col-md-6 mb-3">
+
+                                <!--Local Origem-->
                                 <label for="local_origem" class="form-label">Local de Origem</label>
                                 <select class="form-select" aria-label="local_origem" id="local_origem">
                                     <option selected disabled>Informe seu local de origem</option>
-                                    <option v-for="c in local_origem" :key="c.id">{{ c.cidade }}</option>
+                                    <option v-for="c in local" :key="c.id">{{ c.cidade }}</option>
                                 </select>
+
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="local_origem" class="form-label">Destino</label>
-                                <select class="form-select" aria-label="local_origem" id="local_origem">
+
+                                <!--Destino-->
+                                <label for="destino" class="form-label">Destino</label>
+                                <select class="form-select" aria-label="destino" id="destino">
                                     <option selected disabled>Informe seu destino</option>
-                                    <option v-for="c in local_origem" :key="c.id">{{ c.cidade }}</option>
+                                    <option v-for="c in local" :key="c.id">{{ c.cidade }}</option>
                                 </select>
                             </div>
-                            <div class="col-md-6">
+
+                            <!--Data Ida-->
+                            <div class="col-md-6 mb-3">
+                                <label for="data_ida" class="form-label">Data de ida</label>
+                                <input ref="dataInput" class="form-control white-text" type="date" id="data_ida">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <!--Horário Ida-->
                                 <label for="horario_ida" class="form-label">Horário de Ida</label>
                                 <select class="form-select" aria-label="horario" id="horario">
                                     <option selected disabled>Horário de ida</option>
                                     <option v-for="h in horarios" :key="h.horario">{{ h.horario }}</option>
                                 </select>
+
                             </div>
+
+                            <!--Data Volta-->
+                            <div class="col-md-6 mb-3">
+                                <label for="data_volta" class="form-label">Data de volta</label>
+                                <input ref="dataInput" class="form-control white-text" type="date" id="data_ida">
+                            </div>
+
                             <div class="col-md-6">
-                                <label for="horario_volta" class="form-label">Horário de Volta</label>
+
+                                <!--Horário volta-->
+                                <label for="horario_volta" class="form-label">Horário de volta</label>
                                 <select class="form-select" aria-label="horario" id="horario">
                                     <option selected disabled>Horário de volta</option>
                                     <option v-for="h in horarios" :key="h.horario">{{ h.horario }}</option>
@@ -61,7 +85,7 @@ import NavUsuario from './NavUsuario.vue'
 
 export default class AgendarViagemLocal extends Vue {
 
-    local_origem = [
+    local = [
         { id: 1, cidade: 'Barcelona' },
         { id: 2, cidade: 'Bordeaux' },
         { id: 3, cidade: 'Coimbra' },

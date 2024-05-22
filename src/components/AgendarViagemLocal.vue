@@ -15,15 +15,33 @@
                                     <option v-for="c in local_origem" :key="c.id">{{ c.cidade }}</option>
                                 </select>
                             </div>
-                            <div class="col-md-6">
+                            <!--Data Ida-->
+                            <div class="col-md-6 mb-3">
+                                <label for="data_ida" class="form-label">Data de ida</label>
+                                <input ref="dataInput" class="form-control white-text" type="date" id="data_ida">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <!--Horário Ida-->
                                 <label for="horario_ida" class="form-label">Horário de Ida</label>
                                 <select class="form-select" aria-label="horario" id="horario">
                                     <option selected disabled>Horário de ida</option>
                                     <option v-for="h in horarios" :key="h.horario">{{ h.horario }}</option>
                                 </select>
+
                             </div>
+
+                            <!--Data Volta-->
+                            <div class="col-md-6 mb-3">
+                                <label for="data_volta" class="form-label">Data de volta</label>
+                                <input ref="dataInput" class="form-control white-text" type="date" id="data_ida">
+                            </div>
+
                             <div class="col-md-6">
-                                <label for="horario_volta" class="form-label">Horário de Volta</label>
+
+                                <!--Horário volta-->
+                                <label for="horario_volta" class="form-label">Horário de volta</label>
                                 <select class="form-select" aria-label="horario" id="horario">
                                     <option selected disabled>Horário de volta</option>
                                     <option v-for="h in horarios" :key="h.horario">{{ h.horario }}</option>
