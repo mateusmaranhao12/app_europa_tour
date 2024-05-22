@@ -18,7 +18,7 @@
                             <!--Data Ida-->
                             <div class="col-md-6 mb-3">
                                 <label for="data_ida" class="form-label">Data de ida</label>
-                                <input ref="dataInput" class="form-control white-text" type="date" id="data_ida">
+                                <input ref="dataInput" class="form-control date-input white-text" type="date" id="data_ida">
                             </div>
 
                             <div class="col-md-6 mb-3">
@@ -35,7 +35,7 @@
                             <!--Data Volta-->
                             <div class="col-md-6 mb-3">
                                 <label for="data_volta" class="form-label">Data de volta</label>
-                                <input ref="dataInput" class="form-control white-text" type="date" id="data_ida">
+                                <input ref="dataInput" class="form-control date-input white-text" type="date" id="data_ida">
                             </div>
 
                             <div class="col-md-6">
