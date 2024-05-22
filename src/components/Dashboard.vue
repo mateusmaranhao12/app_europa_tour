@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-    <div class="texto-boas-vindas">
+    <div class="custom-text">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

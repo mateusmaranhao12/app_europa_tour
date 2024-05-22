@@ -1,0 +1,20 @@
+@import 'variaveis';
+
+.custom-table {
+
+  text-align: $center;
+  border-collapse: separate;
+  border-spacing: 0;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 2px $black;
+
+}
+
+.rounded-table {
+  border-radius: 10px; /* Ajuste o valor conforme necessário */
+  overflow: hidden; /* Para aplicar o border-radius corretamente */
+}
+
+.btn-danger, .btn-primary {
+  box-shadow: $black 5px 5px 2px;
+}
