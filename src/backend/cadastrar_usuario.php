@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (!empty($nome) && !empty($email) && !empty($senha)) {
 
-            //Verificar se o email já foi cadastrado
+            // Verificar se o email já foi cadastrado
             if ($db->verificarEmailExistente($email)) {
                 echo json_encode(['status' => 'info', 'mensagem' => 'Usuário já cadastrado!']);
             } else {
