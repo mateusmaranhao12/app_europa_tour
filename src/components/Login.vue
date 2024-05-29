@@ -48,6 +48,7 @@ import { Options, Vue } from 'vue-class-component'
 import NavIndex from '@/components/NavIndex.vue'
 import axios from 'axios'
 import { MensagemAlerta } from '@/utils/interfaces'
+import { LoginResponse } from '@/utils/interfaces'
 
 @Options({
     components: {
@@ -72,38 +73,42 @@ export default class Login extends Vue {
     // Fazer login
     public async fazerLogin() {
         try {
-            const response = await axios.post('http://localhost/Projetos/app_europa_tour/src/backend/login.php', {
+            const response = await axios.post<LoginResponse>('http://localhost/Projetos/app_europa_tour/src/backend/login.php', {
                 email: this.usuarios_cadastrados.email,
                 senha: this.usuarios_cadastrados.senha
-            })
+            });
 
-            if (response.data.status === 'sucesso') {
-                this.$router.push('/pagina-usuario')
+            if (response.data.status === 'sucesso' && response.data.token) {
+                const token = response.data.token;
+                localStorage.setItem('authToken', token);
+                this.$router.push('/pagina-usuario');
             } else {
                 this.mensagem_alerta = {
                     icone: 'fa-solid fa-triangle-exclamation',
                     status: 'alert alert-danger',
-                    mensagem: response.data.mensagem
-                }
+                    mensagem: response.data.mensagem || 'Erro desconhecido'
+                };
 
                 setTimeout(() => {
-                    this.mensagem_alerta = { icone: '', status: '', mensagem: '' }
-                }, 5000)
+                    this.mensagem_alerta = { icone: '', status: '', mensagem: '' };
+                }, 5000);
             }
         } catch (error) {
-            console.error('Erro ao fazer login:', error)
+            console.error('Erro ao fazer login:', error);
             this.mensagem_alerta = {
                 icone: 'fa-solid fa-triangle-exclamation',
                 status: 'alert alert-danger',
                 mensagem: 'Erro ao fazer login. Tente novamente.'
-            }
+            };
 
             setTimeout(() => {
-                this.mensagem_alerta = { icone: '', status: '', mensagem: '' }
-            }, 5000)
+                this.mensagem_alerta = { icone: '', status: '', mensagem: '' };
+            }, 5000);
         }
     }
+
 }
+
 </script>
 
 

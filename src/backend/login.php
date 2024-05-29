@@ -17,8 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $usuario = $db->obterUsuarioPorEmailESenha($email, $senha);
 
             if ($usuario) {
+                // Supondo que você gera um token de alguma forma
+                $token = bin2hex(random_bytes(16));
                 error_log("Login bem-sucedido para o usuário: " . $email);
-                echo json_encode(['status' => 'sucesso', 'mensagem' => 'Login realizado com sucesso']);
+                echo json_encode(['status' => 'sucesso', 'mensagem' => 'Login realizado com sucesso', 'token' => $token]);
             } else {
                 error_log("Falha no login: Email ou senha incorretos para o usuário: " . $email);
                 echo json_encode(['status' => 'erro', 'mensagem' => 'Email ou senha incorretos']);

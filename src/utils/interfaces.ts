@@ -20,3 +20,9 @@ export interface MensagemAlerta { //mensagem de alerta
     mensagem: string
     icone: string
 }
+
+export interface LoginResponse {
+    status: string;
+    token?: string;
+    mensagem?: string;
+}
